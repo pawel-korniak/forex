@@ -1,9 +1,16 @@
 package forexApp.comunication;
 
+import forexApp.forexData.ForexData;
 import forexApp.messages.Message;
 import forexApp.response.Response;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 public class ComunicationChannel {
+    ForexData forexData;
+    public ComunicationChannel(ForexData forexData) {
+        this.forexData = forexData;
+    }
 
     public String getResponse(Message message) {
         Response response = message.getResponse();
@@ -29,6 +36,14 @@ public class ComunicationChannel {
                  - average_hourly_volatility
                  - average_daily_volatility
                 """;
+    }
+
+    public void load(String path){
+        try {
+            forexData.load(new File(path));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
 

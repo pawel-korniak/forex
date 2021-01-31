@@ -7,13 +7,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ForexData {
+
+    private static List<Record> recordList;
+
     public static List<Record> getRecordList() {
         return recordList;
     }
 
-    private static List<Record> recordList;
-
-    public static void load(File file) throws FileNotFoundException {
+    public void load(File file) throws FileNotFoundException {
         Scanner scanner = new Scanner(file);
         scanner.nextLine();
         recordList = new ArrayList<>();
@@ -26,8 +27,5 @@ public class ForexData {
                     ,Double.parseDouble(line[5]));
             recordList.add(record);
         }
-
     }
-
-
 }

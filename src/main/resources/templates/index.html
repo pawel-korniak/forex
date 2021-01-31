@@ -1,28 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<header>
-
-</header>
-
-<section>
-    <div class="center">
-        <input name="input" type="text" placeholder="Write command ...">
-        <button name="submit" type="submit" value="Submit">Submit</button>
-        <div class="response">
-
-        </div>
-
-    </div>
-
-</section>
-
-<footer>
-
-</footer>
+<div th:if="${show}">
+<tr th:each="element: ${elements}">
+    <td th:text="${element.toString()} "></td>
+    <br>
+</tr>
+<form th:action="@{add-element}" th:object="${newElement}" method="post">
+    <p>request : <input type="text" th:field="*{request}"></p>
+    <p><input type="submit" value="submit"></p>
+</form>
+</div>
 </body>
 </html>

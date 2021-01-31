@@ -18,11 +18,11 @@ class ComunicationChannelTest {
     static String setUp(String message){
         ForexData forexData = new ForexData();
         try {
-            forexData.load(new File("DAT_MT_EURUSD_M1_202011.txt"));
+            forexData.load(new File("MT_EURUSD_M1_202011.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        ComunicationChannel comunicationChannel = new ComunicationChannel();
+        ComunicationChannel comunicationChannel = new ComunicationChannel(forexData);
         return comunicationChannel.getResponse(new Message(message));
     }
     @Test

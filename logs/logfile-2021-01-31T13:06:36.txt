@@ -1,0 +1,21 @@
+13:06:48 - get 2020.11.13 14:37 -> 1.18332,1.18334,1.18327,1.18328
+13:06:52 - get low 2020.11.13 14 -> 1.18241
+13:06:56 - get 2020.11.13 14 -> 1.18249,1.18348,1.18241,1.18327
+13:07:07 - asdas -> No such command. type 'help' for commands list
+13:07:12 - help ->  Available commands :
+ - get high/low/open/close yyyy.mm.dd hh:mm
+ - get high/low/open/close yyyy.mm.dd hh
+ - get high/low/open/close yyyy.mm.dd
+ - get yyyy.mm.dd hh:mm
+ - get yyyy.mm.dd hh
+ - get yyyy.mm.dd
+ - volatility yyyy.mm.dd-hh:mm
+ - volatility yyyy.mm.dd-hh
+ - volatility yyyy.mm.dd
+ - most_volatile_day
+ - most_volatile_hour
+ - average_minutely_volatility
+ - average_hourly_volatility
+ - average_daily_volatility
+
+13:07:31 - quit -> quit

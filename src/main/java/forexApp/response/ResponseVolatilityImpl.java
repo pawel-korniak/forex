@@ -1,11 +1,12 @@
 package forexApp.response;
 
 import forexApp.messages.Message;
-
 import java.util.Formatter;
 
+/**
+ * response for 'volatility'
+ */
 public class ResponseVolatilityImpl implements Response{
-
 
     @Override
     public String getResponse(Message message) {

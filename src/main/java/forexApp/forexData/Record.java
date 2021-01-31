@@ -1,5 +1,8 @@
 package forexApp.forexData;
 
+/**
+ * single unit of data from CVS
+ */
 public class Record {
     private String date;
     private String time;

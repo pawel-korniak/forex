@@ -3,17 +3,19 @@ package forexApp.response;
 import forexApp.forexData.ForexData;
 import forexApp.forexData.Record;
 import forexApp.messages.Message;
-
 import java.util.Formatter;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * response for 'average'
+ */
 public class ResponseAverageImpl implements Response{
     @Override
     public String getResponse(Message message) {
             double sum = 0;
             long count = 0;
-            Set<String> set = new HashSet<>(); // Set deduplicates each hour and day
+            Set<String> set = new HashSet<>(); // Set deduplicates each minute, hour or day
             for (Record record : ForexData.getRecordList()){
                 switch (message.getModifier()){
                     case "minutely" : {

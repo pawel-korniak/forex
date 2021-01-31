@@ -1,13 +1,15 @@
 package forexApp.controller;
 
 import lombok.extern.slf4j.Slf4j;
-
 import java.io.File;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 @Slf4j
+/**
+ * helper class to manage paths
+ */
 public class Path{
     private String path;
     private List<String> paths;
@@ -16,6 +18,9 @@ public class Path{
         setPaths();
     }
 
+    /**
+     * sets list of files in '/data' directory
+     */
     public void setPaths() {
         File file = new File("data/");
         paths = Arrays.asList(file.list());

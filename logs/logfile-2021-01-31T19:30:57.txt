@@ -1,0 +1,17 @@
+19:31:19 - get 2020.11.13 14:37 -> 1.18332,1.18334,1.18327,1.18328
+19:31:24 - help ->  Available commands :<br>
+ - get high/low/open/close yyyy.mm.dd hh:mm<br>
+ - get high/low/open/close yyyy.mm.dd hh<br>
+ - get high/low/open/close yyyy.mm.dd<br>
+ - get yyyy.mm.dd hh:mm <br>
+ - get yyyy.mm.dd hh<br>
+ - get yyyy.mm.dd<br>
+ - volatility yyyy.mm.dd-hh:mm<br>
+ - volatility yyyy.mm.dd-hh<br>
+ - volatility yyyy.mm.dd<br>
+ - most_volatile_day<br>
+ - most_volatile_hour<br>
+ - average_minutely_volatility<br>
+ - average_hourly_volatility<br>
+ - average_daily_volatility<br>
+

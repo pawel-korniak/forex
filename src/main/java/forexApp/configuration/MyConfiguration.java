@@ -9,6 +9,9 @@ import org.springframework.context.annotation.Configuration;
 public class MyConfiguration {
 
 @Bean(name = "IMPORTANT")
+/**
+ * marker for logging request and response to file
+ */
     Marker getMarker() {
         return MarkerFactory.getMarker("IMPORTANT");
     }

@@ -15,12 +15,14 @@ import java.util.List;
 
 @Controller
 @Slf4j
+/**
+ * main controller with access to html/thymeleaf interface
+ */
 public class ForexController {
 
     List<Element> elements = new ArrayList<>();
     ComunicationChannel comunicationChannel;
     private final Marker importantMarker;
-    private boolean show;
 
     public ForexController(Marker importantMarker) {
         this.importantMarker = importantMarker;
@@ -29,7 +31,7 @@ public class ForexController {
 
     @GetMapping("index")
     String get(Model model){
-        model.addAttribute("show",show);
+        model.addAttribute("show",comunicationChannel.isShow());
         model.addAttribute("elements", elements);
         model.addAttribute("newElement",new Element());
         return "index";
@@ -37,10 +39,10 @@ public class ForexController {
 
     @PostMapping("add-element")
     String addUser(@ModelAttribute Element element){
-        comunicationChannel.load(LoadFileController.myPath);
+        comunicationChannel.load(LoadFileController.myPath);                //
         element.setResponse(comunicationChannel.getResponse(new Message(element.getRequest())));
         elements.add(element);
-        if (element.getResponse().equals("exit") || element.getResponse().equals("quit")) show = false;
+        if (element.getResponse().equals("exit") || element.getResponse().equals("quit")) comunicationChannel.setShow(false);
         log.info(importantMarker,element.getRequest() + " -> " + element.getResponse() );
         return "redirect:index";
     }

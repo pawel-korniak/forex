@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * keeps data loaded from file
+ */
 public class ForexData {
 
     private static List<Record> recordList;
@@ -14,6 +17,11 @@ public class ForexData {
         return recordList;
     }
 
+    /**
+     * parsing CSV to Record list
+     * @param file
+     * @throws FileNotFoundException
+     */
     public void load(File file) throws FileNotFoundException {
         Scanner scanner = new Scanner(file);
         scanner.nextLine();

@@ -1,4 +1,0 @@
-19:24:35 [http-nio-8080-exec-4] INFO  forexApp.controller.ForexController - get 2020.11.13 14:37 -> 1.18332,1.18334,1.18327,1.18328
-19:24:37 [http-nio-8080-exec-6] INFO  forexApp.controller.ForexController - get low 2020.11.13 14 -> 1.18241
-19:24:40 [http-nio-8080-exec-10] INFO  forexApp.controller.ForexController - asdas -> No such command. type 'help' for commands list
-19:24:43 [http-nio-8080-exec-3] INFO  forexApp.controller.ForexController - get 2020.11.13 14:37 -> 1.18332,1.18334,1.18327,1.18328

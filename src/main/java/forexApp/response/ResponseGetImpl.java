@@ -3,10 +3,12 @@ package forexApp.response;
 import forexApp.forexData.ForexData;
 import forexApp.forexData.Record;
 import forexApp.messages.Message;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * response for 'get'
+ */
 public class ResponseGetImpl implements Response{
     @Override
     public String getResponse(Message message) {
@@ -54,7 +56,7 @@ public class ResponseGetImpl implements Response{
                     }
                 }
                 return "no data";
-            } else {                                   // 'get' with no high/low/open/close argument
+            } else {                // 'get' with no high/low/open/close argument shows all data
                 StringBuilder sb = new StringBuilder();
                 sb.append(getResponse(new Message("get open " + message.getDate() + " " + message.getTime()))+ ",");
                 sb.append(getResponse(new Message("get high " + message.getDate() + " " + message.getTime()))+ ",");

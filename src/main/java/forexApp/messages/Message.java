@@ -1,13 +1,20 @@
 package forexApp.messages;
 
-import forexApp.response.*;
+import forexApp.response.Response;
+import forexApp.response.ResponseAverageImpl;
+import forexApp.response.ResponseGetImpl;
+import forexApp.response.ResponseMostImpl;
+import forexApp.response.ResponseVolatilityImpl;
 
+/**
+ * keeps parsed request
+ */
 public class Message {
     private String argument = "";
     private String modifier = "";
     private String date = "";
     private String time = "";
-    private Response response;
+    private Response response;  // Interface that keep implementation depending on first argument (get,most,volatility,average)
 
     public Message(String message) {
         parseMessage(message);
@@ -17,6 +24,10 @@ public class Message {
         return response;
     }
 
+    /**
+     * parsing String from input
+     * @param message
+     */
     private void parseMessage(String message) {
         String[] subMessage = message.split(" ");
         if (subMessage[0].equals("get")){
@@ -51,6 +62,10 @@ public class Message {
         };
     }
 
+    /**
+     * more options comes with first argument 'get'
+     * @param subMessage
+     */
     private void parseGet(String[] subMessage) {
         argument = "get";
         if (subMessage[1].equals("high"))modifier ="high";

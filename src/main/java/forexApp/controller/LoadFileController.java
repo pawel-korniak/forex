@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 @Slf4j
+/**
+ * controller to load file
+ * offer a select file from '/data' directory
+ */
 public class LoadFileController {
     Path path = new Path();
     static String myPath;

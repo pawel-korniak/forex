@@ -15,6 +15,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * request for localhost:8080/EURUSD/yyyy/mm/dd/hh/mm gives you all data of that date
  *
+ * try DOCKER image at pawelkorniak/forex
+ *
  * @author  Paweł Korniak
  * @version HW3.0
  * @since   2021-01-31

@@ -13,6 +13,17 @@ public class ForexData {
 
     private static List<Record> recordList;
 
+    public ForexData() {
+    }
+
+    public ForexData(String s) {
+        try {
+            load(new File(s));
+        } catch (FileNotFoundException fileNotFoundException) {
+            fileNotFoundException.printStackTrace();
+        }
+    }
+
     public static List<Record> getRecordList() {
         return recordList;
     }

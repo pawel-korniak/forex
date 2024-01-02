@@ -1,0 +1,39 @@
+= Forex Statistics
+
+
+:icons: font
+
+== Table of Contents
+
+* <<#description, Description>>
+* <<#features, Features>>
+* <<#technologies, Technologies Used>>
+* <<#getting-started, Getting Started>>
+* <<#usage, Usage>>
+
+== Description
+
+Forex Statistics is a Java-based application designed for analyzing and visualizing statistical data related to foreign exchange (forex) markets. The application provides insights into currency pair trends, historical data, and statistical indicators to assist traders and analysts in making informed decisions.
+
+== Features
+
+* **Market Analysis:** Analyze historical data and trends for various currency pairs.
+* **Statistical Indicators:** Calculate and visualize common forex indicators.
+* **Real-time Data Integration:** Connect to real-time forex data sources for up-to-date information.
+* **Charting:** Interactive charts for better visualization of market data.
+* **User-friendly Interface:** Intuitive design for easy navigation and analysis.
+
+== Technologies Used
+
+Forex Statistics is developed using the following technologies:
+
+* Java
+* Spring Framework
+
+== Getting Started
+
+To run the Forex Statistics application locally, follow these steps:
+
+1. **Clone the Repository:**
+```bash
+git clone https://github.com/pawel-korniak/forex
